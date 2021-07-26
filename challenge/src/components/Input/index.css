@@ -1,0 +1,27 @@
+.input{
+    width: 100%;
+    background-color: darkolivegreen;
+    color: white;
+    min-height: 100%;
+    word-wrap: bre;
+    margin: 0px;
+}
+.inputArea{
+    display: block;
+    width: 100%;
+    margin:0px;
+    position: static;
+    height: 270px;
+    max-height: 300px;
+}
+.codeArea{
+    position: static;
+    width: 99%;
+    overflow-y: scroll;
+}
+
+code{
+    display: block;
+    max-height: 220px;
+    overflow:scroll
+}

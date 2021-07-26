@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+</head>
+<body>
+    <canvas id="myChart" width="400" height="400"></canvas>
+
+
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+var chartData = {//from w  ww.j a v  a 2 s.com
+  CC: [{
+    code: '123ASD',
+    labels: ["7/2/2018", "7/3/2018", "7/4/2018", "7/5/2018", "7/6/2018", "7/9/2018", "7/10/2018"],
+    datasets: [{
+      label: 'AAA',
+      backgroundColor: "rgba(255,0,0,1)",
+      data: [32,41,21,78,0,0,0]
+    },{
+      label: 'BBB',
+      backgroundColor: "rgba(0,255,0,1)",
+      data: [10,80,12,70,65,44,18]
+    },{
+      label: 'CCC',
+      backgroundColor: "rgba(0,0,205,1)",
+      data: [915,400,233,398,334,766,1071]
+    }]
+  },{
+    code: 'ASD123',
+    labels: ["7/2/2018", "7/3/2018", "7/4/2018", "7/5/2018", "7/6/2018", "7/9/2018", "7/10/2018"],
+    datasets: [{
+      label: 'AAA',
+      backgroundColor: "rgba(255,0,0,1)",
+      data: [55,22,40,2,0,0,0]
+    },{
+      label: 'BBB',
+      backgroundColor: "rgba(0,255,0,1)",
+      data: [10,2,100,0,17,55,74]
+    },{
+      label: 'CCC',
+      backgroundColor: "rgba(0,0,205,1)",
+      data: [232,555,800,900,723,1001,942]
+    }]
+  }]
+};
+chartData.CC.forEach(function(data, index){
+  canvas.id = chartId;
+  document.body.appendChild(canvas);
+  var context = document.getElementById(chartId).getContext('2d');
+  window[chartId] = new Chart(context, {
+    type: 'bar',
+    data: data,
+    options: {
+      title: {
+        display: true,
+        text: data.code
+      },
+      tooltips: {
+        mode: 'index',
+        intersect: false
+      },
+      responsive: true,
+      scales: {
+        xAxes: [{
+          stacked: true,
+        }],
+        yAxes: [{
+          stacked: true
+        }]
+      }
+    }
+  });
+});
+});
+    </script> 
+
+</html>
+

@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Source Code Pro" ;
+  src: local("Source Code Pro"),
+   url("./fonts/SourceSansPro-Regular.ttf") format("truetype");
+  font-weight: bold;
+  }
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Source Code Pro', monospace;
+  font-family: 'Source Sans Pro', sans-serif;
+}
